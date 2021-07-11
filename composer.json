@@ -1,0 +1,17 @@
+{
+    "name": "mihai/battle-of-moria",
+    "authors": [
+        {
+            "name": "Mihai Daboc",
+            "email": "mihai@example.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "lib/"
+        }
+    }
+}
