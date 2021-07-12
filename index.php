@@ -5,4 +5,4 @@ use Models\Wizard;
 
 
 $wizard = new Wizard();
-echo $wizard->getStrength();
+echo $wizard->getFightPower();

@@ -10,6 +10,8 @@ trait WarriorStats
 
     private float $charisma;
 
+    private float $fightPower;
+
     /**
      * @return float
      */
@@ -33,6 +35,15 @@ trait WarriorStats
     {
         return $this->charisma;
     }
+
+    /**
+     * @return float
+     */
+    public function getFightPower(): float
+    {
+        return $this->fightPower;
+    }
+
 
     public function randomStatsValue(): float
     {

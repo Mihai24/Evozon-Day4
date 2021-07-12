@@ -10,6 +10,15 @@ class Wizard
 
     private float $supernatural;
 
+    public function __construct()
+    {
+        $this->strength = $this->randomStatsValue();
+        $this->charisma = $this->randomStatsValue();
+        $this->intelligence = $this->randomStatsValue();
+        $this->supernatural = $this->randomStatsValue();
+        $this->fightPower = $this->calculateFightPower();
+    }
+
     /**
      * @return float
      */
@@ -18,10 +27,8 @@ class Wizard
         return $this->supernatural;
     }
 
-    public function __construct()
+    public function calculateFightPower(): float
     {
-        $this->strength = $this->randomStatsValue();
-        $this->charisma = $this->randomStatsValue();
-        $this->intelligence = $this->randomStatsValue();
+        return 20 * $this->strength + 30 * $this->intelligence + 5 * $this->charisma + 20 * $this->supernatural;
     }
 }

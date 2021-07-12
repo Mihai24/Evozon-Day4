@@ -16,6 +16,7 @@ class Orc
         $this->charisma = $this->randomStatsValue();
         $this->intelligence = $this->randomStatsValue();
         $this->supernatural = $this->randomStatsValue();
+        $this->fightPower = $this->calculateFightPower();
     }
 
     /**
@@ -24,5 +25,10 @@ class Orc
     public function getSupernatural(): float
     {
         return $this->supernatural;
+    }
+
+    public function calculateFightPower(): float
+    {
+        return 30 * $this->strength + 10 * $this->intelligence + 1 * $this->charisma + 5 * $this->supernatural;
     }
 }

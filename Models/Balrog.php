@@ -17,6 +17,7 @@ class Balrog
         $this->charisma = $this->randomStatsValue();
         $this->intelligence = $this->randomStatsValue();
         $this->supernatural = $this->randomStatsValue();
+        $this->fightPower = $this->calculateFightPower();
     }
 
     /**
@@ -25,6 +26,11 @@ class Balrog
     public function getSupernatural(): float
     {
         return $this->supernatural;
+    }
+
+    public function calculateFightPower(): float
+    {
+        return 60 * $this->strength + 5 * $this->intelligence + 1 * $this->charisma + 30 * $this->supernatural;
     }
 
 
